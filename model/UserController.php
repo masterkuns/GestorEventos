@@ -1,13 +1,24 @@
 <?php
 class UserController
 {
-    private $primerNombre;
+    private String $primerNombre;
     private $segundoNombre;
     private $primerApellido;
     private $segundoApellido;
     private $correo;
     private $contraseña;
     private $rol;
+
+    public function __construct($primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $correo, $contraseña)
+    {
+        $this->primerNombre = $primerNombre;
+        $this->segundoNombre = $segundoNombre;
+        $this->primerApellido = $primerApellido;
+        $this->segundoApellido = $segundoApellido;
+        $this->correo = $correo;
+        $this->contraseña = $contraseña;
+
+    }
 
     public function getPrimerNombre()
     {
@@ -72,4 +83,32 @@ class UserController
         return $this;
     }
 
+    public function setSegundoNombre($segundoNombre)
+    {
+        $this->segundoNombre = $segundoNombre;
+
+        return $this;
+    }
+
+    public function setPrimerApellido($primerApellido)
+    {
+        $this->primerApellido = $primerApellido;
+
+        return $this;
+    }
+
+    public function setSegundoApellido($segundoApellido)
+    {
+        $this->segundoApellido = $segundoApellido;
+
+        return $this;
+    }
+
+    public function mostrarInformacion(UserController $usuarios)
+    {
+
+    }
+
+
+   
 }
