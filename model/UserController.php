@@ -18,8 +18,12 @@ class UserController
         $this->segundoApellido = $segundoApellido;
         $this->correo = $correo;
         $this->contraseña = $contraseña;
+        $this->db = Database::connect();
 
     }
+
+    	
+	
 
     public function getPrimerNombre()
     {
@@ -105,6 +109,11 @@ class UserController
         return $this;
     }
 
+    
+	public function getAll(){
+		$categorias = $this->db->query("SELECT * FROM categorias ORDER BY id DESC;");
+		return $categorias;
+	}
    
 
 
