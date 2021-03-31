@@ -5,6 +5,7 @@ class UserController
     private $segundoNombre;
     private $primerApellido;
     private $segundoApellido;
+    private $reContraseña;
     private $correo;
     private $contraseña;
     private $rol;
@@ -104,10 +105,7 @@ class UserController
         return $this;
     }
 
-    public function mostrarInformacion(UserController $usuarios)
-    {
-
-    }
+   
 
 
    
